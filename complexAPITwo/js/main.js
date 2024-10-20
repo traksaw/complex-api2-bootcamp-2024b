@@ -3,19 +3,18 @@ function getMyWord() {
     const urlUno = `https://api.api-ninjas.com/v1/randomword`
     const options = {
         method: 'GET',
-        headers: {
-            'x-Api-key': 'EXyOyn6Z1ROLqILk1NbYYA==3uQH1TRzZMveYzWa',
-        },
+        headers: {'X-Api-Key': 'xApiKey'},
         contentType: 'application/json',
     };
 
     fetch(urlUno, options)
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             const randomWord = data.word[0]
             document.querySelector('#enWord').textContent = `English : ${randomWord}`
 
-            const API_KEY = 'AIzaSyBBIWOfLS66A_xmW1y9uSgobGNLIvs2v_I';
+            const API_KEY = 'apiKey';
 
             const sourceLang = 'en';
 
@@ -35,6 +34,7 @@ function getMyWord() {
                     const translatedText = data.data.translations[0].translatedText;
 
                     document.querySelector('#esWord').textContent = `Español : ${translatedText}`; // "Bonjour, le monde!"
+                    //hello world
 
                 });
 
