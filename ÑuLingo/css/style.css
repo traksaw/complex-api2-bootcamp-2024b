@@ -1,0 +1,65 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+html {
+  background-image: url(../img/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(154, 197, 83);
+  font-family: "Roboto Mono", monospace;
+}
+
+.introSection,
+.displaySection {
+  text-align: center;
+  height: 100px;
+}
+.introSection {
+  margin-bottom: 36%;
+}
+.introSection > h1 {
+  font-size: 50px;
+  margin: 2% 0 2% 0;
+}
+.introSection > p {
+  margin: 0%;
+}
+.displaySection > p {
+  font-size: 34px;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media screen and (max-width: 1024px) {
+  .introSection {
+    margin-bottom: 34%;
+  }
+  
+}
+@media screen and (max-width: 820px) {
+  .introSection {
+    margin-bottom: 28%;
+  }
+  
+}
+@media screen and (max-width: 412px) {
+  .introSection > p {
+    font-size: 1.7rem;
+  }
+  .introSection {
+    margin-bottom: 26%;
+  }
+  
+}
