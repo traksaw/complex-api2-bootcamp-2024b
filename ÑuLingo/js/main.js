@@ -1,5 +1,5 @@
-import { apiKeyB } from "./apiKey.js";
-import { apiKeyA } from "./apiKey.js";
+import { apiKeyB } from "./apiKeys.js";
+import { apiKeyA } from "./apiKeys.js";
 document.querySelector('#learnBtn').addEventListener('click', getMyWord)
 function getMyWord() {
     const urlUno = `https://api.api-ninjas.com/v1/randomword`
