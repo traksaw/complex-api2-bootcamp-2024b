@@ -1,9 +1,11 @@
+import { apiKeyB } from "./apiKey.js";
+import { apiKeyA } from "./apiKey.js";
 document.querySelector('#learnBtn').addEventListener('click', getMyWord)
 function getMyWord() {
     const urlUno = `https://api.api-ninjas.com/v1/randomword`
     const options = {
         method: 'GET',
-        headers: {'X-Api-Key': apiKey},
+        headers: {'X-Api-Key': apiKeyB},
         contentType: 'application/json',
     };
 
@@ -14,7 +16,7 @@ function getMyWord() {
             const randomWord = data.word[0]
             document.querySelector('#enWord').textContent = `English : ${randomWord}`
 
-            const API_KEY = apiKey;
+            const API_KEY = apiKeyA;
 
             const sourceLang = 'en';
 
